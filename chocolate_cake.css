@@ -12,13 +12,10 @@ h2#category {
     background-color: black;
     color: white;
     display: inline-block;
-    /* margin-top: -20px;
-    margin-bottom: 0px; */
     margin: 0 auto; /*center*/
     top: -15px;
     padding: 8px 20px;
     font-size: 16px;
-    /* overflow: visible; */
     position: relative;    
 }
 
@@ -26,8 +23,6 @@ div.category{
     margin-bottom: 0px;
     margin-top: 0;
     overflow: visible;
-    /* position: relative;
-    height: 0; */
 }
 
 p.description{
@@ -44,9 +39,9 @@ p.description{
 
 div.content{
     background-color: whitesmoke;
-    margin: 60px 10% 80px 10%;
-    padding: 0px 30px 30px 30px;
-    min-width: 300px;
+    margin: 40px 8px 80px 8px;
+    padding: 0px 8px 20px 8px;
+    /* min-width: 300px; */
     width:auto;
     /* overflow: auto; */
     box-shadow: 0 0 8px 8px rgb(0, 0, 0, 0.1);
@@ -69,7 +64,6 @@ div.seperator{
 
 div.image{
     position: relative;
-    
 }
 
 table.tableinfo{
@@ -78,21 +72,20 @@ table.tableinfo{
     color: white;
     width: 100%; 
     background-color: #6c829dca;
-    border-color: #6c829dca;     
+    border-color: #6c829dca;   
+    height: 50px;  
 }
 
 table.tableinfo th{
     vertical-align: bottom;
     padding-bottom: 8px;
-    font-size: 16px;
-
+    font-size: 14px;
 }
 
 table.tableinfo td{
     text-align: center;
     vertical-align: top;
-    font-size: 14px;
-
+    font-size: 12px;
 }
 
 img.imageinfo{
@@ -104,7 +97,7 @@ img.imageinfo{
 }
 
 div.columns{
-    width: 45%;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -114,18 +107,11 @@ div.columns h2{
     font-size: 15px;
     border-bottom: 5px solid #6c829d;
     padding-bottom: 5px;
-    
 }
 
 div.items{
     display: inline-block;
-    margin-right: 10%;
-    margin-bottom : 20px;
-
-}
-
-div.rules{
-    float: right;
+    margin-bottom: 0;
 }
 
 div.ingredients p{
@@ -163,4 +149,57 @@ table.instructions td{
 
 table.instructions tr{
     height:40px ;
+}
+
+/* desktop styles */
+
+@media only screen and (min-width:768px) {
+    div.content{
+        margin: 60px 10% 80px 10%;
+        padding: 0px 30px 30px 30px;
+        min-width: 300px;
+    }
+
+    table.tableinfo{
+    height: 80px;  
+    }
+
+    table.tableinfo th{
+    font-size: 16px;
+    }
+
+    table.tableinfo td{
+    font-size: 14px;
+    }
+
+    div.columns{
+    width: 45%;
+    }
+
+    div.columns h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-bottom: 5px solid #6c829d;
+    padding-bottom: 5px;
+    
+    }
+
+    div.items{
+    margin-right: 10%;
+    }
+
+    div.rules{
+    float: right;
+    }
+}
+
+/* limit the site size for larger screens */
+
+@media only screen and (min-width:900px) {
+    div.content{
+            margin-left: auto;
+            margin-right: auto;
+            width: 660px;
+        }
 }
